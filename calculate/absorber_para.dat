@@ -1,0 +1,13 @@
+25.0e+3 0.30 
+12.5e+3 0.50 
+120.0e+3  0.050 
+20.0e+3 0.150 
+200.0e+3  0.030 
+60.0e+3 0.100 
+
+double absorber_force::damper_pz1 = 25.0e+3, absorber_force::detav_pz1 = 0.30;        // 一系垂向减振器
+double absorber_force::damper_pz2 = 12.5e+3,  absorber_force::detav_pz2 = 0.50;
+double absorber_force::damper_sz1 = 120.0e+3, absorber_force::detav_sz1 = 0.050;       // 二系垂向减振器
+double absorber_force::damper_sz2 = 20.0e+3,  absorber_force::detav_sz2 = 0.150;
+double absorber_force::damper_sy1 = 200.0e+3, absorber_force::detav_sy1 = 0.030;       // 二系横向减振器
+double absorber_force::damper_sy2 = 60.0e+3,  absorber_force::detav_sy2 = 0.100;

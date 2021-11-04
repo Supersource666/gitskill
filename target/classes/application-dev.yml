@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3304/subwayDynamic?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      # 在log和console中打印出更漂亮的sql
+      hibernate.format_sql: true
+      # 表直接映射，（表名）不会做过多的处理
+      hibernate.naming.physical-strategy: org.hibernate.scripts.model.naming.PhysicalNamingStrategyStandardImpl
+      # 是否开启数据库二级缓存
+      hibernate.cache.use_second_level_cache: false
+      # Lucene搜索引擎
+      hibernate.search.default.directory_provider: filesystem
+      # 索引文件保存的位置
+      hibernate.search.default.indexBase: ${site.location}/storage/indexes
+  redis:
+    host: 127.0.0.1
+    port: 6379
+SubwayPara:
+  templateVehicle: "vehicle.ftl"
+  exportVehicle: "vehicle.dat"
+  templateControl: "control.ftl"
+  exportControl: "control.dat"
+  templateCross: "cross_sec.ftl"
+  exportCross: "cross_sec.dat"
+  templateVertial: "vertial_sec.ftl"
+  exportVertial: "vertial_sec.dat"
+  templateAbsorber: "absorber_para.ftl"
+  exportAbsorber: "absorber_para.dat"
+  templateSuspension: "suspension_para.ftl"
+  exportSuspension: "suspension_para.dat"
+  templateTypeVehicle: "type_vehicle.ftl"
+  exportTypeVehicle: "type_vehicle.dat"
+  templateAdhesionPara: "adhesion_para.ftl"
+  exportAdhesionPara: "adhesion_para.dat"
+SubwayTM:
+  TM: ".\\calculate"

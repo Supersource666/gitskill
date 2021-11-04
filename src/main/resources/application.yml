@@ -1,0 +1,24 @@
+server:
+  port: 8888
+  undertow:
+    io-threads: 2
+    worker-threads: 32
+    buffer-size: 1024
+    direct-buffers: true
+
+
+spring:
+  profiles:
+    active: @profileActive@
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred
+
+logging:
+  config: classpath:logback-spring.xml

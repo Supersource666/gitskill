@@ -1,0 +1,40 @@
+1 2 4
+0.42
+26040.0 3145.0 3145.0
+0.856e+3  0.168e+3   0.856e+3
+1.693e+3  1.051e+3   1.970e+3
+58.80e+3  1135.56e+3 1077.34e+3 
+590.0  48.0 
+380.0  21.0   3.521  
+20.0   1.30      5.03     1.058
+1.01   0.295    0.29      0.08
+0.845  0.570   0.340
+
+
+int std::Nvehicle = 1;                                       // 总车辆编组
+int std::Nbogie = 2;                                         // 构架个数
+int std::Nwheelset = 4;                                      // 轮对个数
+double  std::Rw = 0.420;                                     // 车轮半径
+double	std::mc = 26040.0;                                   // 车体质量
+double	std::mt = 3145.0;                                    // 构架质量
+double	std::mw = 2683.0;                                    // 轮对质量
+double std::Iwx = 0.856e+3, std::Iwy = 0.168e+3, std::Iwz = 0.856e+3,      // 轮对惯量
+std::Itx = 1.693e+3, std::Ity = 1.051e+3, std::Itz = 1.970e+3,              // 构架惯量
+std::Icx = 58.80e+3, std::Icy = 1135.56e+3, std::Icz = 1077.34e+3;            // 车体惯量
+double  motor::Mm = 590.0, motor::Jm = 48.0;                // 电机质量
+double  motor::Mgb = 380.0, motor::Jgb = 21.0;               // 齿轮箱质量
+double  motor::Jrot = 3.521;                                 // 电机转子转动惯量（kg*m ^ 2）
+
+double  std::car_length = 20.0;                               // 车长
+double	std::lt = 1.30;                                       // 轴距
+double	std::lc = 5.03;                                       // 转向架中心距
+double  std::dw = 1.058;                                      // 一系悬挂横向跨距
+double  std::ds = 1.01;                                       // 二系悬挂横向跨距
+double  std::Htw = 0.295;                                     // 一系悬挂点 - 构架质心
+double  std::Htbn = 0.29;                                     // 轴箱拉杆 - 构架质心
+double  std::Hbt = 0.08;                                      // 构架质心 - 二系悬挂构架点
+double  std::Hcb = 0.845;                                     // 二系悬挂构架点 - 车体质心
+double  std::Hcbst = 0.570;                                 // 二系悬挂止挡点 - 车体横向距离
+double  std::Hbtst = 0.340;                                  // 二系悬挂止挡点 - 构架横向距离
+
+

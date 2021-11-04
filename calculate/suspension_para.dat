@@ -1,0 +1,24 @@
+5.20e+6 1.0e+4
+5.20e+6 1.0e+4 
+1.20e+6 1.0e+3 
+20.0e+6 50.0e+3 
+0.26e+6 4.0e+4 
+0.26e+6 2.0e+2  
+ 0.80e+6 2.0e+2  
+        
+0.02 0.80e+6;
+0.04 2.00e+6;
+
+//%%%%%%%%%%%%%%%%%%%%   一系悬挂参数   %%%%%%%%%%%%%%%%%%%
+double suspension_force::kpx = 5.20e+6,  suspension_force::cpx = 1.0e+4;             // 一系悬挂纵向刚度 / 阻尼
+double suspension_force::kpy = 5.20e+6,  suspension_force::cpy = 1.0e+4;             // 一系悬挂横向刚度 / 阻尼
+double suspension_force::kpz = 1.20e+6,  suspension_force::cpz = 1.0e+3;             // 一系悬挂垂向刚度 / 阻尼
+double suspension_force::kpnx = 20.0e+6, suspension_force::cpnx = 50.0e+3;           // 拉杆纵向刚度 / 阻尼
+//%%%%%%%%%%%%%%%%%%%%   二系悬挂参数   %%%%%%%%%%%%%%%%%%%
+double suspension_force::ksx = 0.26e+6,   suspension_force::csx = 4.0e+4;             // 二系悬挂纵向刚度 / 阻尼
+//double suspension_force::ksx = 0.26e+7, suspension_force::csx = 4.0e+4;             // 二系悬挂纵向刚度 / 阻尼
+double suspension_force::ksy = 0.26e+6,   suspension_force::csy = 2.0e+2;               // 二系悬挂横向刚度 / 阻尼
+double suspension_force::ksz = 0.80e+6,   suspension_force::csz = 2.0e+2;               // 二系悬挂垂向刚度 / 阻尼
+        
+double suspension_force::deta_sy1 = 0.02, suspension_force::ksy_s1 = 0.80e+6;
+double suspension_force::deta_sy2 = 0.04, suspension_force::ksy_s2 = 2.00e+6;

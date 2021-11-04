@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: subway-mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      MYSQL_DATABASE: subwayDynamic
+      MYSQL_ROOT_PASSWORD: root #设置root帐号密码
+      MYSQL_ROOT_HOST: '%'
+      TZ: Asia/Shanghai
+    ports:
+      - 3304:3306
+    expose:
+      - 3306
+    volumes:
+      - /D/dockerFile/subway/mysql/data:/var/lib/mysql #数据文件挂载
+      - /D/dockerFile/subway/mysql/conf:/etc/mysql/conf.d #配置文件挂载
+      - /D/dockerFile/subway/mysql/log:/var/log/mysql #日志文件挂载
+  redis:
+    image: redis:5.0
+    container_name: subway-redis
+    command: redis-server --appendonly yes
+    restart: always
+    volumes:
+      - /D/dockerFile/subway/redis/data:/data #数据文件挂载
+    ports:
+      - 6379:6379
+    expose:
+      - 6379

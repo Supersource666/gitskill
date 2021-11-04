@@ -1,0 +1,7 @@
+3.6e-5  30.0    20.0   10.0  10.0
+
+double std::ot = 3.6e-5;                                            //  积分步长
+double std::v_initial = 30.0 / 3.6;                               //  初始速度
+double std::Begin_dis = 20.0;                                    // 初始轨道长度(预平衡)
+double std::Total_dis = 100.0;                                  // 总运行距离
+double std::Total_time = 10.0;                                       // 时间
